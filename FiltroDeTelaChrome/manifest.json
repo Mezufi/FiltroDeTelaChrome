@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Controle de Tela e Cores",
+  "version": "1.0",
+  "description": "Ajuste brilho, contraste, nitidez e adicione filtros de cor na página.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

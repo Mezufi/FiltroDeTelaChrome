@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 250px; padding: 15px; font-family: Arial, sans-serif; }
+    h3 { margin-top: 0; font-size: 16px; color: #333; }
+    .control-group { margin-bottom: 15px; }
+    label { display: block; font-size: 12px; margin-bottom: 5px; font-weight: bold; }
+    input[type="range"], select { width: 100%; cursor: pointer; }
+    button { width: 100%; padding: 8px; background: #4285f4; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #3367d6; }
+  </style>
+</head>
+<body>
+  <h3>Ajustes de Tela</h3>
+  
+  <div class="control-group">
+    <label>Brilho (<span id="val-brilho">100</span>%)</label>
+    <input type="range" id="brilho" min="10" max="100" value="100">
+  </div>
+
+  <div class="control-group">
+    <label>Contraste (<span id="val-contraste">100</span>%)</label>
+    <input type="range" id="contraste" min="50" max="200" value="100">
+  </div>
+
+  <!-- Nitidez simulada com um leve ajuste de contraste e desfoque -->
+  <div class="control-group">
+    <label>Nitidez (Simulada) (<span id="val-nitidez">0</span>)</label>
+    <input type="range" id="nitidez" min="0" max="10" value="0">
+  </div>
+
+  <div class="control-group">
+    <label>Filtro de Cor (Multiply)</label>
+    <select id="cor">
+      <option value="transparent">Nenhum</option>
+      <option value="rgba(255, 255, 0, 0.2)">Amarelo</option>
+      <option value="rgba(139, 69, 19, 0.3)">Marrom</option>
+      <option value="rgba(255, 0, 0, 0.2)">Vermelho</option>
+      <option value="rgba(128, 128, 128, 0.4)">Cinza</option>
+      <option value="rgba(0, 0, 255, 0.2)">Azul</option>
+    </select>
+  </div>
+
+  <button id="resetar">Restaurar Padrões</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
